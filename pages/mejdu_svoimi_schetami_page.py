@@ -3,7 +3,7 @@ from locators.elements_locator import AllLocators
 from pages.base_page import BasePage
 
 
-class LoginPage(BasePage):
+class BetweenCardsPayments(BasePage):
     locators = AllLocators
 
     def login_page(self):
