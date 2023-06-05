@@ -1,0 +1,1 @@
+# Ipoteka_BSS_MOBILE_AUTO_TEST
