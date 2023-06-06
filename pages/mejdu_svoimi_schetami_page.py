@@ -20,7 +20,7 @@ class BetweenCardsPayments(BasePage):
         choose_sender = self.element_is_visible(self.locators.CHOOSE_SEND)
         if cancel is not None and set_pin is not None:
             cancel.click()
-        else:
+        elif choose_sender is not None:
             choose_sender.click()
         choose_sender.click()
 
@@ -63,7 +63,7 @@ class BetweenCardsPayments(BasePage):
             'humo_anor': {'choose': self.locators.HUMO_ANOR},
             'wallet': {'choose': self.locators.WALLET}
         }
-        if cards_choose in ['uzcard_salary', 'uzcard_kapital']:
+        if cards_choose in ['uzcard_salary', 'uzcard_kapital', 'uzcard_cobage']:
             card_element = self.element_is_visible(taker_cards[cards_choose]['choose'])
             card_element.click()
         elif cards_choose in ['uzcard_cobage', 'uzcard_ofb', 'humo_salary', 'humo_other']:
